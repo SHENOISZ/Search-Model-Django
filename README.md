@@ -8,7 +8,7 @@ engine = Engine()
 <br>
 
 `
-importance more ------------------------> less
+more importance ------------------------> less
 `
 <br>
 fields=['name', 'slug','text']
