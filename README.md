@@ -19,6 +19,8 @@ fields=['text', 'slug']
 
 obj = engine.search(obj=Model, fields=fields, q=search, method='post')
 
+return render(request, 'index.html', {'obj': obj})
+
 ### More Options
 
 obj = engine.search(obj=Model, fields=fields, q=search, method='post', filter={'name':'shenoisz'})
