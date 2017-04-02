@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Busca</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/search.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron col-lg-12">
+                <h1 class="display-3">Search Model Django</h1>
+            </div>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <form class="input-group" action="/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="text" name="q" class="form-control" placeholder="Procurar por...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">Go!</button>
+                    </span>
+                </form>
+            </div>
+            <div class="col-lg-6"></div>
+        </div>
+        <p>&nbsp;</p>
+        <div class="row search-effect">
+            <div class="col-lg-12">
+                <h1>Buscar por: <span class="text-info searck-key">{{ search }}</span></h1>
+                <br>
+                <ul>
+                    {% for b in obj %}
+                    <li class="effect-add">Titulo: {{ b.nome }}</li>
+                    <li class="effect-add">Slug: {{ b.slug }}</li>
+                    <li class="effect-add">Descrição: {{ b.texto }}</li>
+                    <hr> {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script>
+        var search = new Search();
+        search.init();
+    </script>
+</body>
+
+</html>
