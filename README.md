@@ -27,6 +27,8 @@ obj = engine.search(obj=Model, fields=fields, q=search, method='post', order_by=
 
 obj = engine.search(obj=Model, fields=fields, q=search, method='post', order_by='-views', limit=20, filter={'name':'shenoisz'})
 
+return render(request, 'index.html', {'obj': obj})
+
 <br><br>
 
 ## Javascript plugin(required jQuery)
