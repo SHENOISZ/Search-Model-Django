@@ -39,6 +39,30 @@ return render(request, 'index.html', {'obj': obj})
 
 <script src="/static/js/search.js"></script>
 ```
+### Add class in html:
+```
+    <!-- add class search-effect -->
+<div class="row search-effect">
+    <div class="col-lg-12">
+                                <!-- add class searck-key -->
+        <h1>Buscar por: <span class="text-info searck-key">Notebook</span></h1>
+        <ul>
+            <!-- add class effect-add -->
+            <li class="effect-add">Good notebook</li>
+            <li class="effect-add">Notebook black core i3</li>
+            <li class="effect-add">publish: April - 2 - 2017</li>
+        </ul>
+    </div>
+</div>
+```
+
+```
+<script>
+    //initialize search effect
+    var search = new Search();
+    search.init();
+</script>
+```
 
 ![CSCore Logo](https://raw.githubusercontent.com/SHENOISZ/Search-Model-Django/master/screeshots/search-01.png)
 
