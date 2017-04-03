@@ -60,7 +60,7 @@ return render(request, 'index.html', {'obj': obj})
 <script>
     //initialize search effect
     var search = new Search();
-    search.init();
+    search.init('.search-effect');
 </script>
 ```
 

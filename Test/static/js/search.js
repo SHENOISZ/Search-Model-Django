@@ -10,11 +10,11 @@ Search = function() {
         });
     };
 
-    this.init = () => {
+    this.init = (args) => {
 
-        var obj = $('.search-effect .searck-key');
+        var obj = $(args + ' .searck-key');
         var key = obj.html();
-        var text = $('.search-effect .effect-add');
+        var text = $(args + ' .effect-add');
 
         try {
 
@@ -27,13 +27,13 @@ Search = function() {
         }
 
         obj.mouseover(function() {
-            $('.search-effect #search-key').each(function() {
+            $(args + ' #search-key').each(function() {
                 $(this).addClass('search-style');
             });
         });
 
         obj.mouseout(function() {
-            $('.search-effect #search-key').each(function() {
+            $(args + ' #search-key').each(function() {
                 $(this).removeClass('search-style');
             });
         });
