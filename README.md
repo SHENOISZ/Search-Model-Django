@@ -55,7 +55,7 @@ return render(request, 'index.html', {'obj': obj})
     </div>
 </div>
 ```
-
+### Starting the plugin:
 ```
 <script>
     //initialize search effect
