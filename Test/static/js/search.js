@@ -19,7 +19,11 @@ Search = function() {
         try {
 
             key = key.split(' ');
-            for (var i = 0; i < key.length; i++) this.focus(text, key[i]);
+            for (var i = 0; i < key.length; i++) {
+                if (key[i].length > 1) {
+                    this.focus(text, key[i]);
+                }
+            }
 
         } catch (exception) {
 
