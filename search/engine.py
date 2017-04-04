@@ -12,7 +12,7 @@ class Engine(object):
 
     # for method get
     def remove(self, q):
-        return slugify(q).replace('-', ' ').replace('+', ' ').replace('_', ' ')
+        return re.sub("\+|\-|\_", '', slugify(q))
 
     def loop(self,obj=[], fields=[], q='', items=[]):
 
